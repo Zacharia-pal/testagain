@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZ Khonnect - Your IT Needs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toggle button for mobile -->
+  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
+
+  <!-- Header with logo and title -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Company Logo" />
+      <h1>AZ Khonnect</h1>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
+    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
+    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
+  </div>
+
+  <!-- Sidebar navigation -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Our Projects</a></li>
+      <li><a href="goals.html">Our Goals</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="main.png" alt="Hero Image" class="hero-img" />
+    </div>
+
+    <!-- Company Services Description Section -->
+    <section class="services-description">
+        <h2>Our Solutions</h2>
+        <p>
+        We provide <strong>CRM</strong> and <strong>ERP</strong> solutions that are specifically designed to optimize your business processes. 
+        Additionally, we offer <strong>Data Analysis</strong> and <strong>Business Analysis</strong> services where necessary to support your strategic decision-making. 
+        We also create <strong>dashboards</strong> and tailor solutions to meet your specific needs.
+        </p>
+    </section>
+
+    <!-- Grid blocks -->
+    <div class="grid">
+      <div class="grid-item grid-item-1" onclick="location.href='about.html'">
+        <h3>About Us</h3>
+        <p>Learn who we are and what drives us.</p>
+      </div>
+      <div class="grid-item grid-item-2" onclick="location.href='projects.html'">
+        <h3>Our Projects</h3>
+        <p>Discover what we've built and delivered.</p>
+      </div>
+      <div class="grid-item grid-item-3" onclick="location.href='goals.html'">
+        <h3>Our Goals</h3>
+        <p>See where we’re heading in the IT world.</p>
+      </div>
+      <div class="grid-item grid-item-4" onclick="location.href='contact.html'">
+        <h3>Contact</h3>
+        <p>Let’s get in touch and collaborate.</p>
+      </div>
+      <div class="grid-item grid-item-5" onclick="location.href='services.html'">
+        <h3>Services</h3>
+        <p>Explore our range of IT solutions.</p>
+      </div>
+      <div class="grid-item grid-item-6" onclick="location.href='careers.html'">
+        <h3>Careers</h3>
+        <p>Join our team of professionals.</p>
+      </div>
+      <div class="grid-item grid-item-7" onclick="location.href='blog.html'">
+        <h3>Blog</h3>
+        <p>Read updates and industry insights.</p>
+      </div>
+      <div class="grid-item grid-item-8" onclick="location.href='faq.html'">
+        <h3>FAQ</h3>
+        <p>Find answers to common questions.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS for toggle -->
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
