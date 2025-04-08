@@ -175,15 +175,25 @@ html, body {
   }
   
   /* Example Hover Backgrounds */
-  .grid-item-1::before { background-image: url('logofull.png'); }
-  .grid-item-2::before { background-image: url('handshake.jpeg'); }
-  .grid-item-3::before { background-image: url('handshake.jpeg'); }
-  .grid-item-4::before { background-image: url('handshake.jpeg'); }
-  .grid-item-5::before { background-image: url('handshake.jpeg'); }
-  .grid-item-6::before { background-image: url('teamwork.png'); }
-  .grid-item-7::before { background-image: url('handshake.jpeg'); }
-  .grid-item-8::before { background-image: url('handshake.jpeg'); }
-  .grid-item-9::before { background-image: url('handshake.jpeg'); }
+  .grid-item-1::before { background-image: url('img/logofull.png'); }
+  .grid-item-2::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-3::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-4::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-5::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-6::before { background-image: url('img/teamwork.png'); }
+  .grid-item-7::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-8::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project1::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project2::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project3::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project4::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project5::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project6::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project7::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-project8::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-contact1::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-contact2::before { background-image: url('img/handshake.jpeg'); }
+
 
   
   /* Navbar Toggle (Mobile Only) */
