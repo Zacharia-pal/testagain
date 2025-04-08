@@ -47,26 +47,30 @@
   <main class="content">
     <section class="about-section">
 
-            <!-- Hero Image -->
-    <div class="hero-image">
-        <img src="../img/logofull.png" alt="Hero Image" class="hero-img" />
+      <div class="hero-image">
+        <img src="../img/us.png" alt="Hero Image" class="hero-img" />
       </div>
+            
 
       <h2>About Us</h2>
 
+      
       <p>
         At <strong>AZ Khonnect</strong>, we believe in building smart digital solutions that don't just serve a function — they help businesses evolve. Founded in Belgium, our company was created with the mission to empower organizations through meaningful IT systems and data-driven decision-making. We are passionate about improving the way businesses operate, with both <strong>ecological</strong> and <strong>economic sustainability</strong> as core pillars of our approach.
       </p>
-
+            <!-- Hero Image -->
+            <div class="hero-frames">
+              <img id="frameSequence" src="../img/frames/ezgif-frame-001.jpg" alt="Scrolling Animation" />
+            </div>
       <p>
         Our team brings together diverse experience from key industries such as:
       </p>
 
       <ul>
-        <li><strong>HR & Recruitment:</strong> Automating processes to help teams find, hire, and retain the best talent with ease and efficiency.</li>
-        <li><strong>Logistics:</strong> Creating smart systems that track operations, manage inventories, and optimize delivery routes in real-time.</li>
-        <li><strong>Finance:</strong> Implementing secure and scalable solutions for reporting, budgeting, and performance tracking.</li>
-        <li><strong>Horeca (Hospitality):</strong> Supporting restaurants and hotels with digital platforms that streamline reservations, order management, and customer engagement.</li>
+        <li><strong>HR & Recruitment:</strong> Automating processes to help teams find, hire, and retain the best talent with ease and efficiency.</li><br>
+        <li><strong>Logistics:</strong> Creating smart systems that track operations, manage inventories, and optimize delivery routes in real-time.</li><br>
+        <li><strong>Finance:</strong> Implementing secure and scalable solutions for reporting, budgeting, and performance tracking.</li><br>
+        <li><strong>Horeca (Hospitality):</strong> Supporting restaurants and hotels with digital platforms that streamline reservations, order management, and customer engagement.</li><br>
       </ul>
 
       <p>
@@ -86,6 +90,7 @@
       </p>
 
       <h3>Our Partners</h3>
+      <h4>HP</h4>
 
     </section>
   </main>
@@ -96,5 +101,23 @@
       document.querySelector('.sidebar').classList.toggle('active');
     }
   </script>
+  <script>
+    const frame = document.getElementById('frameSequence');
+    const totalFrames = 200; // Update if you have more or fewer frames
+    const imagePath = index => {
+      const frameNumber = String(index).padStart(3, '0'); // 001, 002, ...
+      return `../img/frames/ezgif-frame-${frameNumber}.jpg`;
+    };
+  
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollFraction = 2 * scrollTop / maxScroll;
+  
+      const frameIndex = Math.min(totalFrames, Math.ceil(scrollFraction * totalFrames));
+      frame.src = imagePath(frameIndex);
+    });
+  </script>
+  
 </body>
 </html>

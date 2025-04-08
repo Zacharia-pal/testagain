@@ -176,12 +176,11 @@ html, body {
   
   /* Example Hover Backgrounds */
   .grid-item-1::before { background-image: url('img/logofull.png'); }
-  .grid-item-2::before { background-image: url('img/handshake.jpeg'); }
-  .grid-item-3::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-2::before { background-image: url('img/projects.png'); }
+  .grid-item-3::before { background-image: url('img/goals.png'); }
   .grid-item-4::before { background-image: url('img/handshake.jpeg'); }
-  .grid-item-5::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-5::before { background-image: url('img/services.png'); }
   .grid-item-6::before { background-image: url('img/teamwork.png'); }
-  .grid-item-7::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-8::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-project1::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-project2::before { background-image: url('img/handshake.jpeg'); }
@@ -328,4 +327,22 @@ html, body {
   }
 
 
+  .hero-frames {
+    position: sticky;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  .hero-frames img {
+    position: sticky;
+    z-index: 10;
+    left: -100 px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
   
