@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../logo.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZ Khonnect - Our Services</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!-- Toggle button for mobile -->
+  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
+
+  <!-- Header with logo and title -->
+  <header>
+    <div class="logo">
+      <img src="../img/logo.png" alt="Company Logo" />
+      <h1>AZ Khonnect</h1>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
+    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
+    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
+  </div>
+
+  <!-- Sidebar navigation -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="../home/">Home</a></li>
+      <li><a href="../about/">About Us</a></li>
+      <li><a href="../projects/">Our Projects</a></li>
+      <li><a href="../goals/">Our Goals</a></li>
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../careers/">Careers</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      &copy; AlphaZeta Khonnect 2025
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="../img/services.png" alt="Hero Image" class="hero-img" />
+    </div>
+
+    <!-- Company Services Description Section -->
+    <section class="services-description">
+      <h2>Our Services</h2>
+      <p>
+        At AZ Khonnect, we specialize in delivering end-to-end IT services tailored to your business. Whether you're a startup, SME, or a large enterprise, our team can support your digital journey with innovative, secure, and scalable solutions.
+      </p>
+    </section>
+
+    <!-- Grid blocks for services -->
+    <div class="grid">
+      <div class="grid-item grid-item-service1" onclick="location.href='custom-software.html'">
+        <h3>Custom Software Development</h3>
+        <p>We build tailor-made software to streamline your operations, automate workflows, and support unique business models.</p>
+      </div>
+
+      <div class="grid-item grid-item-service2" onclick="location.href='crm.html'">
+        <h3>CRM Implementation</h3>
+        <p>From custom-built CRMs to Odoo-based solutions, we design and integrate systems that help manage and grow customer relationships.</p>
+      </div>
+
+      <div class="grid-item grid-item-service3" onclick="location.href='data-warehouse.html'">
+        <h3>Data Warehousing & Analytics</h3>
+        <p>We centralize and structure your data for powerful insights and reporting, helping you make smarter business decisions.</p>
+      </div>
+
+      <div class="grid-item grid-item-service4" onclick="location.href='process-optimization.html'">
+        <h3>Process Optimization</h3>
+        <p>Our experts analyze and enhance your internal processes for better efficiency, cost savings, and performance.</p>
+      </div>
+
+      <div class="grid-item grid-item-service5" onclick="location.href='wms.html'">
+        <h3>Warehouse Management Systems</h3>
+        <p>We deliver WMS platforms to optimize logistics, track inventory, and streamline warehouse operations in real-time.</p>
+      </div>
+
+      <div class="grid-item grid-item-service6" onclick="location.href='it-consulting.html'">
+        <h3>IT Consulting</h3>
+        <p>Our consultants guide you through IT strategy, system architecture, and digital transformation initiatives.</p>
+      </div>
+
+      <div class="grid-item grid-item-service7" onclick="location.href='web-dev.html'">
+        <h3>Website & Web App Development</h3>
+        <p>Get modern, responsive, and high-performance websites and web applications tailored to your brand and goals.</p>
+      </div>
+
+      <div class="grid-item grid-item-service8" onclick="location.href='support.html'">
+        <h3>Support & Maintenance</h3>
+        <p>We offer reliable ongoing support to ensure your systems stay secure, updated, and high-performing.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS for toggle -->
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

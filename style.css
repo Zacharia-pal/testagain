@@ -46,7 +46,7 @@ html, body {
     right: 20px;
     z-index: 110;
     display: flex;
-    gap: 10px;
+    gap: 5px;
   }
   
   .language-switcher a img {
@@ -194,7 +194,14 @@ html, body {
   .grid-item-contact1::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-contact2::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-contact3::before { background-image: url('img/handshake.jpeg'); }
-
+  .grid-item-service1::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service2::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service3::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service4::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service5::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service6::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service7::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-service8::before { background-image: url('img/handshake.jpeg'); }
 
   
   /* Navbar Toggle (Mobile Only) */
