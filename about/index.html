@@ -112,7 +112,7 @@
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollFraction = 2 * scrollTop / maxScroll;
+      const scrollFraction = 1 * scrollTop / maxScroll;
   
       const frameIndex = Math.min(totalFrames, Math.ceil(scrollFraction * totalFrames));
       frame.src = imagePath(frameIndex);
