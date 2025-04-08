@@ -34,7 +34,7 @@ html, body {
   
   header .logo h1 {
     margin-left: 15px;
-    font-size: clamp(10px, 5vw, 21px);
+    font-size: clamp(10px, 5vw, 22px);
     font-style: italic;
     font-family: 'Segoe UI', sans-serif;
   }
