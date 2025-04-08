@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../logo.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - AZ Khonnect</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
+
+  <header>
+    <div class="logo">
+      <img src="../img/logo.png" alt="Company Logo" />
+      <h1>AZ Khonnect</h1>
+    </div>
+  </header>
+
+  <div class="language-switcher">
+    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
+    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
+    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
+  </div>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="../home/">Home</a></li>
+      <li><a href="../about/">About Us</a></li>
+      <li><a href="../projects/">Our Projects</a></li>
+      <li><a href="../goals/">Our Goals</a></li>
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../careers/">Careers</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      &copy; AlphaZeta Khonnect 2025
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="hero-image">
+      <img src="../img/teamwork2.png" alt="Hero Image" class="hero-img" />
+    </div>
+
+    <section class="services-description">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you! Whether it's a quick question or a detailed inquiry, you can reach out to us via phone, email, or WhatsApp. Choose the method that works best for you:
+      </p>
+    </section>
+
+    <div class="grid">
+      <div class="grid-item grid-item-contact1" onclick="location.href='tel:+32470885049'">
+        <h3>Call Us</h3>
+        <p>+32 470 88 50 49</p>
+      </div>
+
+      <div class="grid-item grid-item-contact2" onclick="location.href='mailto:info@az-k.be'">
+        <h3>Email Us</h3>
+        <p>info@az-k.be</p>
+      </div>
+
+      <div class="grid-item grid-item-contact3" onclick="location.href='https://wa.me/32470885049'">
+        <h3>WhatsApp</h3>
+        <p>Chat with us on WhatsApp</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
