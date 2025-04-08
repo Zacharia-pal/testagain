@@ -193,6 +193,7 @@ html, body {
   .grid-item-project8::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-contact1::before { background-image: url('img/handshake.jpeg'); }
   .grid-item-contact2::before { background-image: url('img/handshake.jpeg'); }
+  .grid-item-contact3::before { background-image: url('img/handshake.jpeg'); }
 
 
   
