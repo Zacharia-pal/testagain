@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AZ Khonnect - FAQ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .faq-search {
+      margin: 2rem 1rem;
+      text-align: center;
+    }
+    .faq-search input {
+      width: 80%;
+      max-width: 500px;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .faq-list {
+      margin: 2rem auto;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: #f2f7ff;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .faq-item:hover {
+      background: #e0efff;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Toggle button for mobile -->
+  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
+
+  <!-- Header with logo and title -->
+  <header>
+    <div class="logo">
+      <img src="../img/logo.png" alt="Company Logo" />
+      <h1>AZ Khonnect</h1>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
+    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
+    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
+  </div>
+
+  <!-- Sidebar navigation -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="../home/index.html">Home</a></li>
+      <li><a href="../about/index.html">About Us</a></li>
+      <li><a href="../projects/index.html">Our Projects</a></li>
+      <li><a href="../goals/index.html">Our Goals</a></li>
+      <li><a href="../contact/index.html">Contact</a></li>
+      <li><a href="../services/index.html">Services</a></li>
+      <li><a href="../careers/index.html">Careers</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../faq/index.html">FAQ</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        &copy; AlphaZeta Khonnect 2025
+      </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content">
+    <section class="faq-search">
+      <input type="text" id="faqInput" placeholder="Search our FAQ (Frequently Asked Questions)..." onkeyup="filterFAQ()" />
+    </section>
+
+    <section class="faq-list" id="faqList">
+      <div class="faq-item" onclick="location.href='what-is-crm.html'">What is a CRM system?</div>
+      <div class="faq-item" onclick="location.href='erp-benefits.html'">Benefits of ERP solutions</div>
+      <div class="faq-item" onclick="location.href='what-is-data-analysis.html'">What is Data Analysis?</div>
+      <div class="faq-item" onclick="location.href='data-analysis.html'">How does Data Analysis help my business?</div>
+      <div class="faq-item" onclick="location.href='dashboard-customization.html'">Can dashboards be customized?</div>
+      <div class="faq-item" onclick="location.href='contact-support.html'">How do I contact support?</div>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+
+    function filterFAQ() {
+      const input = document.getElementById('faqInput');
+      const filter = input.value.toLowerCase();
+      const list = document.getElementById('faqList');
+      const items = list.getElementsByClassName('faq-item');
+
+      for (let i = 0; i < items.length; i++) {
+        const text = items[i].textContent || items[i].innerText;
+        items[i].style.display = text.toLowerCase().includes(filter) ? '' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>
