@@ -1,123 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About AZ Khonnect - a Belgium-founded IT consulting firm specialising in CRM, ERP, data warehousing, and process optimisation." />
   <title>About Us - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
-  <!-- Toggle button for mobile -->
-  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
 
-  <!-- Header with logo and title -->
   <header>
-    <div class="logo">
-      <img src="../img/logo.png" alt="Company Logo" />
-      <h1><em>AZ Khonnect</em></h1>
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
+      <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" class="active" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" data-i18n="nav.portal" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
-    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
-    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
-  </div>
-
-  <!-- Sidebar navigation -->
-  <nav class="sidebar">
-    <ul>
-      <li><a href="../home/">Home</a></li>
-      <li><a href="../about/">About Us</a></li>
-      <li><a href="../projects/">Our Projects</a></li>
-      <li><a href="../goals/">Our Goals</a></li>
-      <li><a href="../contact/">Contact</a></li>
-      <li><a href="../services/">Services</a></li>
-      <li><a href="../careers/">Careers</a></li>
-      <li><a href="../faq/">FAQ</a></li>
-    </ul>
-    <div class="sidebar-footer">
-        &copy; AlphaZeta Khonnect 2025
-      </div>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" class="active" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" data-i18n="nav.portal" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
   </nav>
+  <div class="mobile-overlay"></div>
 
-  <!-- Main content -->
-  <main class="content">
-    <section class="about-section">
-
-      <div class="hero-image">
-        <img src="../img/us.png" alt="Hero Image" class="hero-img" />
+  <main>
+    <div class="hero-section">
+      <img src="../img/us.png" alt="Our Team" />
+      <div class="hero-content">
+        <h2 data-i18n="about.hero.title">About Us</h2>
+        <p data-i18n="about.hero.subtitle">A trusted Belgian IT partner delivering measurable business outcomes.</p>
       </div>
-            
+    </div>
 
-      <h2>About Us</h2>
-
-      
-      <p>
-        At <strong>AZ Khonnect</strong>, we believe in building smart digital solutions that don't just serve a function — they help businesses evolve. Founded in Belgium, our company was created with the mission to empower organizations through meaningful IT systems and data-driven decision-making. We are passionate about improving the way businesses operate, with both <strong>ecological</strong> and <strong>economic sustainability</strong> as core pillars of our approach.
+    <div class="section reveal">
+      <p data-i18n="about.intro">
+        AZ Khonnect is a Belgium-founded IT solutions and consulting firm specialising in enterprise systems that drive operational efficiency. We design, build, and implement technology platforms -- from CRM and ERP to data warehouses and custom software -- that enable organisations to make better decisions and scale with confidence. Sustainability, both ecological and economic, is embedded in every engagement.
       </p>
-            <!-- Hero Image -->
-            <div class="hero-frames">
-              <img id="frameSequence" src="../img/frames/ezgif-frame-001.jpg" alt="Scrolling Animation" />
-            </div>
-      <p>
-        Our team brings together diverse experience from key industries such as:
-      </p>
+    </div>
 
+    <div class="section-alt">
+      <div class="section reveal">
+        <div class="hero-frames">
+          <canvas id="frameCanvas" style="width:100%;height:auto;display:block;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="section reveal">
+      <h3 data-i18n="about.industry.title">Industry Expertise</h3>
+      <p>We bring proven experience across sectors where operational complexity demands robust IT infrastructure:</p>
       <ul>
-        <li><strong>HR & Recruitment:</strong> Automating processes to help teams find, hire, and retain the best talent with ease and efficiency.</li><br>
-        <li><strong>Logistics:</strong> Creating smart systems that track operations, manage inventories, and optimize delivery routes in real-time.</li><br>
-        <li><strong>Finance:</strong> Implementing secure and scalable solutions for reporting, budgeting, and performance tracking.</li><br>
-        <li><strong>Horeca (Hospitality):</strong> Supporting restaurants and hotels with digital platforms that streamline reservations, order management, and customer engagement.</li><br>
+        <li><strong>HR &amp; Recruitment:</strong> Workflow automation for talent acquisition, onboarding, and retention management.</li>
+        <li><strong>Logistics:</strong> Real-time inventory tracking, route optimisation, and warehouse management systems.</li>
+        <li><strong>Finance:</strong> Secure reporting platforms, budget management, and financial performance dashboards.</li>
+        <li><strong>Hospitality:</strong> Integrated reservation, order management, and guest engagement platforms for hotels and restaurants.</li>
       </ul>
 
       <p>
-        We understand that every business is unique — that’s why we don’t believe in one-size-fits-all. Whether you're a small startup or an established enterprise, we adapt our tools and strategies to align with your specific goals.
+        Every engagement is scoped to the client's specific requirements. We tailor our approach whether working with growing businesses or established enterprises.
       </p>
+    </div>
 
-      <h3>Why Choose Us?</h3>
-      <p>
-        🔹 <strong>Industry Knowledge:</strong> We've been in your shoes and understand your needs.<br/>
-        🔹 <strong>End-to-End Solutions:</strong> From analysis and consulting to implementation and training.<br/>
-        🔹 <strong>Eco-Conscious Development:</strong> We actively look for ways to reduce waste and promote efficiency through sustainable tech.<br/>
-        🔹 <strong>Local and Global:</strong> While proudly Belgian, our vision is international.
-      </p>
+    <div class="section-alt">
+      <div class="section reveal">
+        <h3 data-i18n="about.why.title">Why AZ Khonnect</h3>
+        <ul>
+          <li><strong>Domain Expertise:</strong> Deep understanding of the industries we serve, not just the technology.</li>
+          <li><strong>Full-Lifecycle Delivery:</strong> From strategic analysis and architecture through implementation, training, and support.</li>
+          <li><strong>Sustainable by Design:</strong> Resource-efficient solutions that minimise waste and maximise long-term value.</li>
+          <li><strong>Belgian Roots, International Reach:</strong> Headquartered in Belgium with the capacity to serve clients across borders.</li>
+        </ul>
+        <p>
+          We deliver clarity, structure, and measurable improvement. Our work is defined by outcomes, not promises.
+        </p>
+      </div>
+    </div>
 
-      <p>
-        At AZ Khonnect, we don't just deliver software — we deliver clarity, structure, and innovation. Let us help you work smarter, grow faster, and contribute to a more sustainable future.
-      </p>
-
-      <h3>Our Partners</h3>
-      <h4>HP</h4>
-
-    </section>
+    <div class="section reveal">
+      <h3 data-i18n="about.partners.title">Our Partners</h3>
+      <p><strong>HP</strong></p>
+    </div>
   </main>
 
-  <!-- JS for toggle -->
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
   <script>
-    function toggleSidebar() {
-      document.querySelector('.sidebar').classList.toggle('active');
-    }
+    (function() {
+      var canvas = document.getElementById('frameCanvas');
+      var container = document.querySelector('.hero-frames');
+      if (!canvas || !container) return;
+
+      var ctx = canvas.getContext('2d');
+      var totalFrames = 200;
+      var frames = [];
+      var loaded = 0;
+      var currentFrame = 0;
+      var ticking = false;
+
+      // Build image paths
+      function imagePath(index) {
+        return '../img/frames/ezgif-frame-' + String(index).padStart(3, '0') + '.jpg';
+      }
+
+      // Preload all frames
+      for (var i = 0; i <= totalFrames; i++) {
+        var img = new Image();
+        img.src = imagePath(i);
+        (function(idx) {
+          img.onload = function() {
+            loaded++;
+            // Set canvas size from first loaded image
+            if (idx === 0) {
+              canvas.width = img.naturalWidth;
+              canvas.height = img.naturalHeight;
+              ctx.drawImage(img, 0, 0);
+            }
+          };
+        })(i);
+        frames.push(img);
+      }
+
+      function drawFrame(index) {
+        if (index === currentFrame) return;
+        currentFrame = index;
+        var img = frames[index];
+        if (img && img.complete && img.naturalWidth > 0) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0);
+        }
+      }
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var rect = container.getBoundingClientRect();
+          var windowH = window.innerHeight;
+          // Calculate progress: 0 when container top hits viewport bottom, 1 when container bottom hits viewport top
+          var start = rect.top + rect.height;
+          var end = rect.top;
+          var progress = 1 - (start / (windowH + rect.height));
+          progress = Math.max(0, Math.min(1, progress));
+
+          var frameIndex = Math.round(progress * totalFrames);
+          frameIndex = Math.max(0, Math.min(totalFrames, frameIndex));
+          drawFrame(frameIndex);
+          ticking = false;
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
   </script>
-  <script>
-    const frame = document.getElementById('frameSequence');
-    const totalFrames = 200; // Update if you have more or fewer frames
-    const imagePath = index => {
-      const frameNumber = String(index).padStart(3, '0'); // 001, 002, ...
-      return `../img/frames/ezgif-frame-${frameNumber}.jpg`;
-    };
-  
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollFraction = 1 * scrollTop / maxScroll;
-  
-      const frameIndex = Math.min(totalFrames, Math.ceil(scrollFraction * totalFrames));
-      frame.src = imagePath(frameIndex);
-    });
-  </script>
-  
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

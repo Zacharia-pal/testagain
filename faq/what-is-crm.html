@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>What is a CRM System? | AZ Khonnect FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn what a CRM system is and how AZ Khonnect can help implement one for your business." />
+  <title>What is a CRM System? - AZ Khonnect FAQ</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="../logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main class="content">
-    <h2>What is a CRM System?</h2>
-    <p>
-      <strong>CRM (Customer Relationship Management)</strong> is a technology that helps businesses manage, improve, and analyze customer interactions and data throughout the customer lifecycle. The goal is to strengthen customer relationships and drive business growth.
-    </p>
-    <p>
-      A CRM system stores detailed customer information such as contact data, purchase history, communication logs, and support interactions—all in one central place. This helps sales, marketing, and customer service teams collaborate more effectively.
-    </p>
-    <p>
-      <strong>For example:</strong> If a sales agent speaks with a client, they can log the notes into the CRM. Later, a support agent can instantly access that record, saving time and ensuring consistency in communication.
-    </p>
-    <p>
-      At AZ Khonnect, we offer customizable CRM platforms built to suit your team’s workflow, helping you retain more clients, improve service quality, and increase overall efficiency.
-    </p>
-    <a href="../faq/" class="back-button">← Back to FAQ</a>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="faq.crm.title">What is a CRM System?</h2>
+      <p data-i18n="faq.crm.intro">
+        A CRM (Customer Relationship Management) system centralises all customer data -- contact details, purchase history, communication logs, and support records -- into a single platform. It enables sales, marketing, and service teams to work from the same information, improving coordination and client outcomes.
+      </p>
+      <p>
+        <strong>Example:</strong> When a sales representative logs a client conversation, that record is immediately available to support and account management teams. This eliminates information silos and ensures consistent communication.
+      </p>
+      <p>
+        AZ Khonnect implements CRM platforms tailored to your team's workflow -- both custom-built and Odoo-based -- to improve client retention, service quality, and pipeline visibility.
+      </p>
+      <a href="../faq/" class="back-button" data-i18n="faq.back">Back to FAQ</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

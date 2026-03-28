@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal — AZ Khonnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="supabase.min.js?v=2"></script>
+</head>
+<body class="auth-page">
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-logo">
+      <img src="../img/logo-dark.svg" alt="AZ Khonnect">
+      <h1>AZ Khonnect</h1>
+      <p id="portal-subtitle">Client Portal</p>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="auth-lang">
+      <button onclick="setPortalLang('en')" id="lang-en" class="lang-btn active">EN</button>
+      <button onclick="setPortalLang('nl')" id="lang-nl" class="lang-btn">NL</button>
+      <button onclick="setPortalLang('fr')" id="lang-fr" class="lang-btn">FR</button>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" onclick="switchTab('login')" id="tab-login">Login</button>
+        <button class="auth-tab" data-tab="register" onclick="switchTab('register')" id="tab-register">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="auth-form active">
+        <div class="form-group">
+          <label for="login-email" id="lbl-login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-control" placeholder="you@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password" id="lbl-login-password">Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <a href="#" class="forgot-link" id="forgot-password-link">Forgot password?</a>
+        <button type="submit" class="btn btn-primary btn-block" id="btn-login">Login</button>
+        <div id="login-error" class="form-error" style="display:none;"></div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="auth-form">
+        <div class="form-group">
+          <label for="reg-company" id="lbl-reg-company">Company Name</label>
+          <input type="text" id="reg-company" class="form-control" placeholder="Your company name" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-name" id="lbl-reg-name">Contact Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-email" id="lbl-reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="you@company.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-password" id="lbl-reg-password">Password</label>
+            <input type="password" id="reg-password" class="form-control" placeholder="Min. 8 characters" required minlength="8">
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm-password" id="lbl-reg-confirm">Confirm Password</label>
+            <input type="password" id="reg-confirm-password" class="form-control" placeholder="Repeat password" required minlength="8">
+          </div>
+        </div>
+        <div class="password-requirements" id="pw-reqs">
+          <p id="pw-reqs-title" style="font-weight:600;margin-bottom:4px;">Password requirements:</p>
+          <ul>
+            <li id="req-length" class="req-fail">Minimum 8 characters</li>
+            <li id="req-upper" class="req-fail">At least one uppercase letter</li>
+            <li id="req-lower" class="req-fail">At least one lowercase letter</li>
+            <li id="req-number" class="req-fail">At least one number</li>
+            <li id="req-special" class="req-fail">At least one special character (!@#$%^&*)</li>
+          </ul>
+        </div>
+
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="reg-gdpr" required>
+          <label for="reg-gdpr" id="lbl-gdpr">I consent to AZ Khonnect processing my personal data for the purpose of providing IT services and client communication, in accordance with <a href="#" onclick="showModal('gdpr')">GDPR regulations</a>.</label>
+        </div>
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="reg-terms" required>
+          <label for="reg-terms" id="lbl-terms">I accept the <a href="#" onclick="showModal('terms')">General Terms &amp; Conditions</a>.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="btn-register">Create Account</button>
+        <div id="register-success" class="form-success" style="display:none;"></div>
+      </form>
+    </div>
+
+    <div class="auth-footer">
+      <a href="https://az-k.be">&larr; Back to az-k.be</a>
+    </div>
+  </div>
+
+  <!-- GDPR Modal -->
+  <div class="modal-overlay" id="modal-gdpr" style="display:none;" onclick="if(event.target===this)closeModal('gdpr')">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('gdpr')">&times;</button>
+      <h2>Privacy & Data Processing Policy</h2>
+      <div class="modal-body">
+        <p><strong>AZ Khonnect</strong> ("we", "us") is committed to protecting your personal data in accordance with the General Data Protection Regulation (EU) 2016/679 ("GDPR").</p>
+        <h3>What data we collect</h3>
+        <ul>
+          <li>Company name, contact name, and email address (provided during registration)</li>
+          <li>Service request details and communication history</li>
+          <li>Technical data (login timestamps, session information)</li>
+        </ul>
+        <h3>Purpose of processing</h3>
+        <ul>
+          <li>Providing and managing IT services you have requested</li>
+          <li>Client communication regarding project progress and proposals</li>
+          <li>Account management and authentication</li>
+        </ul>
+        <h3>Legal basis</h3>
+        <p>Processing is based on your explicit consent (Art. 6(1)(a) GDPR) and the necessity for the performance of a contract (Art. 6(1)(b) GDPR).</p>
+        <h3>Data retention</h3>
+        <p>Your data is retained for the duration of our business relationship plus 5 years for legal compliance. You may request deletion at any time.</p>
+        <h3>Your rights</h3>
+        <p>You have the right to access, rectify, erase, restrict processing, data portability, and withdraw consent. Contact us at <strong>info@az-k.be</strong>.</p>
+        <h3>Data controller</h3>
+        <p>AZ Khonnect, Belgium. Email: info@az-k.be</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div class="modal-overlay" id="modal-terms" style="display:none;" onclick="if(event.target===this)closeModal('terms')">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('terms')">&times;</button>
+      <h2>General Terms &amp; Conditions</h2>
+      <div class="modal-body">
+        <h3>1. Scope</h3>
+        <p>These terms govern the use of the AZ Khonnect Client Portal and the provision of IT services by AZ Khonnect to registered clients.</p>
+        <h3>2. Services</h3>
+        <p>Service requests submitted through the portal are subject to review and acceptance by AZ Khonnect. A formal proposal with pricing will be provided before any work commences. No obligation arises from submitting a request.</p>
+        <h3>3. Proposals &amp; Pricing</h3>
+        <p>All proposals are valid for 30 days unless otherwise stated. Pricing is exclusive of VAT (21%) unless explicitly indicated. Payment terms are 30 days from invoice date.</p>
+        <h3>4. Confidentiality</h3>
+        <p>Both parties agree to maintain confidentiality of all business information exchanged through the portal and during the course of service delivery.</p>
+        <h3>5. Intellectual Property</h3>
+        <p>Upon full payment, all deliverables become the property of the client, unless otherwise agreed in writing. AZ Khonnect retains the right to use general methodologies and non-proprietary tools.</p>
+        <h3>6. Liability</h3>
+        <p>AZ Khonnect's liability is limited to the total fees paid for the specific service in question. We are not liable for indirect, consequential, or incidental damages.</p>
+        <h3>7. Termination</h3>
+        <p>Either party may terminate an engagement with 30 days written notice. Work completed up to termination date will be invoiced.</p>
+        <h3>8. Governing Law</h3>
+        <p>These terms are governed by Belgian law. Disputes shall be resolved by the courts of Brussels, Belgium.</p>
+        <h3>9. Amendments</h3>
+        <p>AZ Khonnect reserves the right to modify these terms. Clients will be notified of material changes via email.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="supabase-config.js?v=2"></script>
+  <script src="auth.js?v=2"></script>
+</body>
+</html>

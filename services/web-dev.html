@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website and web application development by AZ Khonnect. Responsive corporate websites, web apps, multilingual support, SEO optimisation, and hosting management." />
+  <title>Website &amp; Web App Development - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
+      <h1>AZ Khonnect</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="services.card.web.title">Website &amp; Web App Development</h2>
+      <p>Your website is often the first interaction a potential client has with your business. AZ Khonnect builds responsive, professional websites and web applications that represent your brand effectively, load quickly, and work flawlessly across devices. From corporate informational sites to interactive web-based tools, we deliver solutions that are clean, maintainable, and built to perform.</p>
+
+      <h3>Our Approach</h3>
+      <p>We take a content-first, performance-driven approach to web development. Before writing a single line of code, we work with you to define your site&rsquo;s goals, audience, and content structure. Whether you need a multilingual corporate presence or a functional web application with user authentication and data management, the architecture is designed around your actual requirements&mdash;not a bloated template.</p>
+      <p>We build with clean HTML, CSS, and JavaScript. Where appropriate, we leverage static site generation for maximum speed and security, deploying to platforms like Cloudflare Pages or GitHub Pages for reliable, low-maintenance hosting. For more dynamic applications, we develop server-side functionality using Python and PostgreSQL, ensuring robust data handling and scalability.</p>
+      <p>Every site we build is tested across browsers and devices, optimised for search engines, and delivered with the documentation your team needs to manage content updates independently.</p>
+
+      <h3>Key Capabilities</h3>
+      <ul>
+        <li><strong>Responsive Web Design</strong> &ndash; Mobile-first layouts that adapt seamlessly to smartphones, tablets, and desktop screens.</li>
+        <li><strong>Web Application Development</strong> &ndash; Interactive, data-driven applications using HTML, CSS, JavaScript, and Python backends with PostgreSQL databases.</li>
+        <li><strong>Static Site Deployment</strong> &ndash; Fast, secure websites deployed via Cloudflare Pages, GitHub Pages, or similar platforms with automated build pipelines.</li>
+        <li><strong>SEO Optimisation</strong> &ndash; Semantic markup, meta tag strategy, performance tuning, and structured data implementation to maximise search visibility.</li>
+        <li><strong>Multilingual Support</strong> &ndash; Full internationalisation with language switching (French, Dutch, English), translated content management, and locale-aware formatting.</li>
+        <li><strong>Hosting &amp; Domain Management</strong> &ndash; DNS configuration, SSL certificates, deployment pipelines, and ongoing hosting administration.</li>
+        <li><strong>Performance Tuning</strong> &ndash; Image optimisation, caching strategies, minification, and Core Web Vitals improvement for fast load times.</li>
+      </ul>
+
+      <h3>What We Deliver</h3>
+      <ul>
+        <li>A fully responsive website or web application, tested and deployed to production</li>
+        <li>Clean, well-documented source code managed in Git</li>
+        <li>SEO-optimised pages with proper meta tags, headings, and structured data</li>
+        <li>Multilingual functionality with easy content translation workflows</li>
+        <li>Hosting setup, domain configuration, and SSL provisioning</li>
+        <li>Training for your team on content updates and basic site management</li>
+      </ul>
+
+      <h3>Who This Is For</h3>
+      <p>Our web development services are ideal for businesses that need a professional online presence without the overhead of a large agency engagement. Whether you are a startup launching your first website, an established company refreshing an outdated design, or an organisation that needs a custom web tool for internal or client-facing use, we deliver efficiently and at a scale that matches your needs. We have built sites for clients in insurance, non-profits, hospitality, and professional services&mdash;each tailored to the audience and objectives of that business.</p>
+
+      <h3>Pricing</h3>
+      <div style="background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%); border-radius: 12px; padding: 30px; margin: 20px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+          <tr style="border-bottom: 2px solid #ddd;">
+            <th style="text-align: left; padding: 12px 16px; color: #1a2744;">Description</th>
+            <th style="text-align: right; padding: 12px 16px; color: #666;">Market Average</th>
+            <th style="text-align: right; padding: 12px 16px; color: #1a2744; font-weight: 700;">AZ Khonnect Price</th>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Corporate Website (5-10 pages)</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;3,000 &ndash; &euro;10,000</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;2,250 &ndash; &euro;7,500</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Web Application Development</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;8,000 &ndash; &euro;30,000</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;6,000 &ndash; &euro;22,500</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Multilingual Implementation</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;1,500 &ndash; &euro;4,000</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;1,125 &ndash; &euro;3,000</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Hosting, Domain &amp; SSL Setup</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;500 &ndash; &euro;1,500</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;375 &ndash; &euro;1,125</td>
+          </tr>
+        </table>
+        <p style="margin-top: 16px; padding: 12px 16px; background: #3da5d9; color: white; border-radius: 8px; text-align: center; font-weight: 600;">
+          25% below market rate &mdash; enterprise-grade delivery at competitive pricing
+        </p>
+      </div>
+
+      <a href="../services/" class="back-button" data-i18n="service.back">Back to Services</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

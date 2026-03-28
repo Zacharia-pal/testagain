@@ -1,33 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Support | AZ Khonnect FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How to contact AZ Khonnect support - email, live chat and more." />
+  <title>Contact Support - AZ Khonnect FAQ</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="../logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main class="content">
-    <h2>How Do I Contact Support?</h2>
-    <p>
-      We're here to help. You can reach out to our support team through the following channels:
-    </p>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:support@az-k.be">support@az-k.be</a> (response within 48 hours)</li>
-      <li><strong>Live Chat:</strong> For quick questions, our chatbot assistant is available at the bottom-right of the screen.</li>
-    </ul>
-    <p>
-      Support is available in English, Dutch, and French.
-    </p>
-    <a href="../faq/" class="back-button">← Back to FAQ</a>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="faq.support.title">How Do I Reach Technical Support?</h2>
+      <p data-i18n="faq.support.intro">Contact our support team through the following channels:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@az-k.be">support@az-k.be</a> -- response within 48 hours</li>
+        <li><strong>Live Chat:</strong> Available via the chatbot in the bottom-right corner of the screen for quick queries.</li>
+      </ul>
+      <p>Support is provided in English, Dutch, and French.</p>
+      <a href="../faq/" class="back-button" data-i18n="faq.back">Back to FAQ</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

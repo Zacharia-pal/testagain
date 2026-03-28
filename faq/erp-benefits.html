@@ -1,38 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benefits of ERP | AZ Khonnect FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the benefits of ERP systems and how AZ Khonnect tailors ERP platforms to your business." />
+  <title>Benefits of ERP - AZ Khonnect FAQ</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="../logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main class="content">
-    <h2>What Are the Benefits of ERP?</h2>
-    <p>
-      <strong>ERP (Enterprise Resource Planning)</strong> systems unify a company’s departments—like finance, inventory, sales, HR, and logistics—under one shared database and interface.
-    </p>
-    <p>
-      By consolidating systems and processes, ERP improves transparency and reduces manual effort.
-    </p>
-    <ul>
-      <li><strong>Efficiency:</strong> Automation eliminates repetitive tasks and accelerates workflows.</li>
-      <li><strong>Accuracy:</strong> A centralized system reduces data entry errors and inconsistencies.</li>
-      <li><strong>Real-Time Data:</strong> Decision-makers can access updated financials, inventory, or sales dashboards on demand.</li>
-      <li><strong>Scalability:</strong> As your business grows, ERP adapts to handle more complexity and users.</li>
-    </ul>
-    <p>
-      AZ Khonnect tailors ERP platforms to your specific industry and business model—ensuring a smooth transition and ongoing support.
-    </p>
-    <a href="../faq/" class="back-button">← Back to FAQ</a>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="faq.erp.title">What Are the Business Benefits of ERP?</h2>
+      <p data-i18n="faq.erp.intro">
+        An ERP (Enterprise Resource Planning) system unifies finance, inventory, sales, HR, and logistics under a single database and interface, eliminating data silos and reducing manual overhead.
+      </p>
+      <ul>
+        <li><strong>Efficiency:</strong> Automates repetitive tasks and accelerates cross-departmental workflows.</li>
+        <li><strong>Accuracy:</strong> A single source of truth reduces data entry errors and inconsistencies.</li>
+        <li><strong>Real-Time Visibility:</strong> On-demand access to current financials, inventory levels, and operational dashboards.</li>
+        <li><strong>Scalability:</strong> Modular architecture that grows with your organisation's complexity.</li>
+      </ul>
+      <p>
+        AZ Khonnect configures ERP platforms to your industry and operating model, with structured migration planning and post-deployment support.
+      </p>
+      <a href="../faq/" class="back-button" data-i18n="faq.back">Back to FAQ</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

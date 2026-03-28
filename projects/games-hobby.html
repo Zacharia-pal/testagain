@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Games and personal projects — creative development, game design, and side projects showcasing a passion for technology beyond enterprise work." />
+  <title>Games &amp; Personal Projects - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
+      <h1>AZ Khonnect</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="project.games.title">Games &amp; Personal Projects</h2>
+      <p><strong>Scope:</strong> Creative development and side projects<br />
+      <strong>Status:</strong> Ongoing</p>
+
+      <h3>Beyond the Enterprise</h3>
+      <p data-i18n="project.games.overview">Professional work tells one part of the story. Personal projects reveal the curiosity and drive that fuel everything else. Outside of client engagements and enterprise deliverables, there is a continuous thread of creative development and experimentation that keeps technical skills sharp and explores areas that traditional projects do not always reach. These side projects are where new ideas get tested, new technologies get explored, and the boundaries of what is possible get pushed in a low-stakes, high-creativity environment.</p>
+
+      <h3>Game Development</h3>
+      <p>Game development serves as a creative outlet that combines programming, design, logic, and storytelling into a single discipline. Building games requires the same structured thinking and problem-solving skills used in enterprise software development, but applies them to interactive experiences where user engagement is the primary measure of success. From designing game mechanics and writing logic to handling rendering and user input, game development exercises a broad range of technical skills in an environment where experimentation is encouraged and iteration is fast.</p>
+
+      <h3>The AZ Khonnect Website</h3>
+      <p>This website is itself a personal project. AZ Khonnect was designed and built from scratch as a professional portfolio and business platform. It demonstrates front-end development skills including responsive design, clean HTML and CSS architecture, JavaScript interactivity, and attention to user experience. The site serves as both a showcase for completed work and a living project that continues to evolve with new features and content.</p>
+
+      <h3>Skills in Practice</h3>
+      <ul>
+        <li>HTML, CSS, and JavaScript (web development)</li>
+        <li>Game design and development</li>
+        <li>Responsive design and cross-browser compatibility</li>
+        <li>UI/UX design principles</li>
+        <li>Version control with Git</li>
+        <li>Self-directed learning and experimentation</li>
+      </ul>
+
+      <h3>Why It Matters</h3>
+      <p>Personal projects are where passion meets practice. They demonstrate a genuine interest in technology that goes beyond the requirements of any single role or client engagement. The skills developed through game design, web development, and creative coding feed directly back into professional work, bringing fresh perspectives and a broader technical vocabulary to every project. A well-rounded developer is one who builds not only for clients but also for the joy of building itself.</p>
+
+      <a href="../projects/" class="back-button" data-i18n="project.back">Back to Projects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

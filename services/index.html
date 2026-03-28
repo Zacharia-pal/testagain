@@ -1,112 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZ Khonnect - Our Services</title>
+  <meta name="description" content="AZ Khonnect services - custom software, CRM, data warehousing, process optimisation, WMS, IT consulting and more." />
+  <title>Our Services - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
-  <!-- Toggle button for mobile -->
-  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
 
-  <!-- Header with logo and title -->
   <header>
-    <div class="logo">
-      <img src="../img/logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" data-i18n="nav.portal" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
-    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
-    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
-  </div>
-
-  <!-- Sidebar navigation -->
-  <nav class="sidebar">
-    <ul>
-      <li><a href="../home/">Home</a></li>
-      <li><a href="../about/">About Us</a></li>
-      <li><a href="../projects/">Our Projects</a></li>
-      <li><a href="../goals/">Our Goals</a></li>
-      <li><a href="../contact/">Contact</a></li>
-      <li><a href="../services/">Services</a></li>
-      <li><a href="../careers/">Careers</a></li>
-      <li><a href="../faq/">FAQ</a></li>
-    </ul>
-    <div class="sidebar-footer">
-      &copy; AlphaZeta Khonnect 2025
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" data-i18n="nav.portal" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
     </div>
   </nav>
+  <div class="mobile-overlay"></div>
 
-  <!-- Main content -->
-  <main class="content">
-    <!-- Hero Image -->
-    <div class="hero-image">
-      <img src="../img/services.png" alt="Hero Image" class="hero-img" />
+  <main>
+    <div class="hero-section">
+      <img src="../img/services.png" alt="Our Services" />
+      <div class="hero-content">
+        <h2 data-i18n="services.hero.title">Our Services</h2>
+        <p data-i18n="services.hero.subtitle">Full-lifecycle IT services from strategy through implementation and ongoing support.</p>
+      </div>
     </div>
 
-    <!-- Company Services Description Section -->
-    <section class="services-description">
-      <h2>Our Services</h2>
-      <p>
-        At AZ Khonnect, we specialize in delivering end-to-end IT services tailored to your business. Whether you're a startup, SME, or a large enterprise, our team can support your digital journey with innovative, secure, and scalable solutions.
-      </p>
-    </section>
-
-    <!-- Grid blocks for services -->
-    <div class="grid">
-      <div class="grid-item grid-item-service1" onclick="location.href='custom-software.html'">
-        <h3>Custom Software Development</h3>
-        <p>We build tailor-made software to streamline your operations, automate workflows, and support unique business models.</p>
+    <div class="section-alt">
+      <div class="section section-centered reveal">
+        <p data-i18n="services.intro">
+          AZ Khonnect delivers integrated IT services across the full project lifecycle. From strategic consulting and system architecture to development, deployment, and maintenance -- we build secure, scalable solutions that align with your business objectives.
+        </p>
+        <p style="text-align: center; margin-top: 15px; color: #3da5d9; font-weight: 600;" data-i18n="services.pricing.note">All services offered at 25% below market rate. Click any service for detailed pricing.</p>
+        <p style="text-align: center; margin-top: 10px;" data-i18n="services.pricing.cta">Ready to get started? Submit a service request through our Client Portal to receive a personalised proposal.</p>
       </div>
+    </div>
 
-      <div class="grid-item grid-item-service2" onclick="location.href='crm.html'">
-        <h3>CRM Implementation</h3>
-        <p>From custom-built CRMs to Odoo-based solutions, we design and integrate systems that help manage and grow customer relationships.</p>
-      </div>
-
-      <div class="grid-item grid-item-service3" onclick="location.href='data-warehouse.html'">
-        <h3>Data Warehousing & Analytics</h3>
-        <p>We centralize and structure your data for powerful insights and reporting, helping you make smarter business decisions.</p>
-      </div>
-
-      <div class="grid-item grid-item-service4" onclick="location.href='process-optimization.html'">
-        <h3>Process Optimization</h3>
-        <p>Our experts analyze and enhance your internal processes for better efficiency, cost savings, and performance.</p>
-      </div>
-
-      <div class="grid-item grid-item-service5" onclick="location.href='wms.html'">
-        <h3>Warehouse Management Systems</h3>
-        <p>We deliver WMS platforms to optimize logistics, track inventory, and streamline warehouse operations in real-time.</p>
-      </div>
-
-      <div class="grid-item grid-item-service6" onclick="location.href='it-consulting.html'">
-        <h3>IT Consulting</h3>
-        <p>Our consultants guide you through IT strategy, system architecture, and digital transformation initiatives.</p>
-      </div>
-
-      <div class="grid-item grid-item-service7" onclick="location.href='web-dev.html'">
-        <h3>Website & Web App Development</h3>
-        <p>Get modern, responsive, and high-performance websites and web applications tailored to your brand and goals.</p>
-      </div>
-
-      <div class="grid-item grid-item-service8" onclick="location.href='support.html'">
-        <h3>Support & Maintenance</h3>
-        <p>We offer reliable ongoing support to ensure your systems stay secure, updated, and high-performing.</p>
+    <div class="section reveal">
+      <div class="grid">
+        <div class="grid-item" onclick="location.href='custom-software.html'">
+          <h3 data-i18n="services.card.software.title">Custom Software Development</h3>
+          <p data-i18n="services.card.software.desc">Purpose-built applications designed to automate workflows, integrate systems, and support unique operational requirements.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='crm.html'">
+          <h3 data-i18n="services.card.crm.title">CRM Implementation</h3>
+          <p data-i18n="services.card.crm.desc">Custom and Odoo-based CRM platforms for lead management, client retention, and sales pipeline optimisation.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='data-warehouse.html'">
+          <h3 data-i18n="services.card.data.title">Data Warehousing &amp; Analytics</h3>
+          <p data-i18n="services.card.data.desc">Centralised data architecture with reporting and dashboards that transform raw data into strategic intelligence.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='process-optimization.html'">
+          <h3 data-i18n="services.card.process.title">Process Optimisation</h3>
+          <p data-i18n="services.card.process.desc">Systematic analysis and redesign of business processes to reduce cost, eliminate bottlenecks, and improve throughput.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='wms.html'">
+          <h3 data-i18n="services.card.wms.title">Warehouse Management Systems</h3>
+          <p data-i18n="services.card.wms.desc">Real-time inventory tracking, logistics coordination, and warehouse workflow automation at scale.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='it-consulting.html'">
+          <h3 data-i18n="services.card.consulting.title">IT Consulting</h3>
+          <p data-i18n="services.card.consulting.desc">Strategic advisory on IT architecture, technology selection, and digital transformation roadmaps.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='web-dev.html'">
+          <h3 data-i18n="services.card.web.title">Website &amp; Web App Development</h3>
+          <p data-i18n="services.card.web.desc">High-performance, responsive web applications and corporate websites built for usability and conversion.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='support.html'">
+          <h3 data-i18n="services.card.support.title">Support &amp; Maintenance</h3>
+          <p data-i18n="services.card.support.desc">Ongoing system monitoring, security updates, and technical support to ensure continuous uptime and performance.</p>
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- JS for toggle -->
-  <script>
-    function toggleSidebar() {
-      document.querySelector('.sidebar').classList.toggle('active');
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

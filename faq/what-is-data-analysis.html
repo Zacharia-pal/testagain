@@ -1,38 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>What is Data Analysis? | AZ Khonnect FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Understand what data analysis is and how AZ Khonnect helps businesses extract actionable insights." />
+  <title>What is Data Analysis? - AZ Khonnect FAQ</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="../logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main class="content">
-    <h2>What is Data Analysis?</h2>
-    <p>
-      <strong>Data Analysis</strong> refers to the process of systematically applying statistical or logical techniques to describe, summarize, and compare data in order to extract meaningful insights. It allows businesses to make data-driven decisions, identify trends, and optimize their operations.
-    </p>
-    <p>
-      The core goal of data analysis is to help organizations turn raw data into actionable insights. Whether you're analyzing sales trends, customer behavior, or employee performance, data analysis helps uncover patterns that would otherwise go unnoticed. This in turn empowers decision-makers with real-time insights and predictions.
-    </p>
-    <p>
-      <strong>For example:</strong> A retail company may collect sales data on a daily basis. By analyzing this data, the company could identify which products are most popular during certain seasons, which stores are underperforming, or which marketing campaigns are driving the most sales. These insights enable better decisions on stock ordering, marketing, and store operations.
-    </p>
-    <p>
-      Data analysis encompasses a wide range of methods, including data cleaning, statistical analysis, regression modeling, and machine learning algorithms. It's important to use the right techniques based on the type of data and the questions being asked.
-    </p>
-    <p>
-      AZ Khonnect offers comprehensive data analysis services to help businesses analyze large volumes of data, identify actionable insights, and support strategic decision-making. Our team of experts can design tailored data analysis solutions that align with your business goals, delivering impactful results.
-    </p>
-    <a href="../faq/" class="back-button">← Back to FAQ</a>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" class="active" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="faq.dataanalysis.title">What is Data Analysis?</h2>
+      <p data-i18n="faq.dataanalysis.intro">
+        Data analysis is the systematic process of examining data to extract actionable insights. It enables organisations to identify trends, measure performance, and make evidence-based decisions rather than relying on intuition.
+      </p>
+      <p>
+        <strong>Example:</strong> A retail company analysing daily sales data can identify seasonal demand patterns, underperforming locations, and the true ROI of marketing campaigns -- insights that directly inform strategy.
+      </p>
+      <p>
+        The discipline encompasses data cleaning, statistical modelling, regression analysis, and machine learning -- with the right technique selected based on the data type and business question at hand.
+      </p>
+      <p>
+        AZ Khonnect provides end-to-end data analysis services, from data structuring and warehousing through to insight delivery and dashboard reporting.
+      </p>
+      <a href="../faq/" class="back-button" data-i18n="faq.back">Back to FAQ</a>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,57 +1,148 @@
-// Language data
-const languages = {
-    en: {
-        homeTitle: "Welcome to Our IT Solutions Business",
-        homeDescription: "Innovative IT solutions tailored to your needs. Let’s solve your challenges together!",
-        buttonText: "Get in Touch",
-        // Add other page content here
-    },
-    nl: {
-        homeTitle: "Welkom bij Ons IT Oplossingsbedrijf",
-        homeDescription: "Innovatieve IT-oplossingen op maat van uw behoeften. Laten we samen uw uitdagingen oplossen!",
-        buttonText: "Neem contact op",
-        // Add other page content here
-    },
-    fr: {
-        homeTitle: "Bienvenue dans notre entreprise de solutions informatiques",
-        homeDescription: "Des solutions informatiques innovantes adaptées à vos besoins. Résolvons vos défis ensemble !",
-        buttonText: "Contactez-nous",
-        // Add other page content here
+/* ========== Mobile Menu Toggle ========== */
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.querySelector('.hamburger');
+    var mobileNav = document.querySelector('.mobile-nav');
+    var overlay = document.querySelector('.mobile-overlay');
+
+    if (!hamburger || !mobileNav) return;
+
+    function toggleMenu() {
+      var isOpen = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      if (overlay) overlay.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
-};
 
-// Function to get the selected language from the URL
-function getLanguage() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang');
-    return lang && languages[lang] ? lang : 'en'; // Default to 'en'
+    function closeMenu() {
+      mobileNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+
+    // Close menu when a link is clicked
+    var links = mobileNav.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', closeMenu);
+    }
+  });
+})();
+
+/* ========== Scroll Reveal (IntersectionObserver) ========== */
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      // Fallback: show all immediately
+      reveals.forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+  });
+})();
+
+/* ========== FAQ Filter ========== */
+function filterFAQ() {
+  var input = document.getElementById('faqInput');
+  if (!input) return;
+  var filter = input.value.toLowerCase();
+  var list = document.getElementById('faqList');
+  if (!list) return;
+  var items = list.getElementsByClassName('faq-item');
+  for (var i = 0; i < items.length; i++) {
+    var text = items[i].textContent || items[i].innerText;
+    items[i].style.display = text.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+  }
 }
 
-// Function to change the content based on the language
-function changeLanguage() {
-    const lang = getLanguage();
-    const languageContent = languages[lang];
-
-    // Update page content based on the selected language
-    document.getElementById('home-title').textContent = languageContent.homeTitle;
-    document.getElementById('home-description').textContent = languageContent.homeDescription;
-    document.querySelector('button').textContent = languageContent.buttonText;
-
-    // Optionally, you can also update other elements on each page here
+/* ========== Dark Mode ========== */
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  var isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+  updateDarkModeIcon(isDark);
 }
 
-// Initialize the language change on page load
-window.onload = changeLanguage;
+function updateDarkModeIcon(isDark) {
+  var icons = document.querySelectorAll('.dark-mode-icon');
+  for (var i = 0; i < icons.length; i++) {
+    icons[i].innerHTML = isDark ? '&#9788;' : '&#9789;';
+  }
+}
 
+function loadDarkMode() {
+  var isDark = localStorage.getItem('darkMode') === 'true';
+  if (isDark) {
+    document.body.classList.add('dark-mode');
+  }
+  updateDarkModeIcon(isDark);
+}
 
-// // later additions
-//     const toggleButton = document.querySelector('.navbar-toggle');
-//     const sidebar = document.querySelector('.sidebar');
-//     const header = document.querySelector('header');
-//     const content = document.querySelector('.content');
+/* ========== Language Switching ========== */
+function setLanguage(lang) {
+  localStorage.setItem('language', lang);
+  applyLanguage(lang);
+}
 
-//     toggleButton.addEventListener('click', () => {
-//         sidebar.classList.toggle('active');  // Toggle sidebar visibility
-//         header.classList.toggle('shifted');  // Add 'shifted' class to header
-//         content.classList.toggle('shifted');  // Add 'shifted' class to content
-//     });
+function applyLanguage(lang) {
+  if (typeof translations === 'undefined') return;
+  var elements = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < elements.length; i++) {
+    var key = elements[i].getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      elements[i].textContent = translations[lang][key];
+    }
+  }
+  // Handle placeholder translations
+  var placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+  for (var j = 0; j < placeholders.length; j++) {
+    var pKey = placeholders[j].getAttribute('data-i18n-placeholder');
+    if (translations[lang] && translations[lang][pKey]) {
+      placeholders[j].placeholder = translations[lang][pKey];
+    }
+  }
+  // Highlight active language flag
+  var allFlags = document.querySelectorAll('.language-flags img, .mobile-flags img');
+  for (var k = 0; k < allFlags.length; k++) {
+    allFlags[k].style.opacity = '0.5';
+  }
+  var flagMap = { en: 'English', nl: 'Nederlands', fr: 'Francais' };
+  var activeName = flagMap[lang] || '';
+  for (var m = 0; m < allFlags.length; m++) {
+    if (allFlags[m].alt === activeName) {
+      allFlags[m].style.opacity = '1';
+    }
+  }
+}
+
+function loadLanguage() {
+  var lang = localStorage.getItem('language') || 'en';
+  applyLanguage(lang);
+}
+
+/* ========== Init Dark Mode & Language on Load ========== */
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    loadDarkMode();
+    loadLanguage();
+  });
+})();

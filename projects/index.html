@@ -1,122 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="../logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZ Khonnect - Your IT Needs</title>
+  <meta name="description" content="Explore AZ Khonnect's project portfolio - accounting software, CRM, data warehouses, WMS and more." />
+  <title>Our Projects - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
 </head>
 <body>
-  <!-- Toggle button for mobile -->
-  <div class="navbar-toggle" onclick="toggleSidebar()">☰</div>
 
-  <!-- Header with logo and title -->
   <header>
-    <div class="logo">
-      <img src="../img/logo.png" alt="Company Logo" />
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
       <h1>AZ Khonnect</h1>
     </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" data-i18n="nav.portal" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <a href="https://fr.az-k.be"><img src="https://flagcdn.com/w40/fr.png" alt="Français" /></a>
-    <a href="https://nl.az-k.be"><img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" /></a>
-    <a href="https://az-k.be"><img src="https://flagcdn.com/w40/us.png" alt="English" /></a>
-  </div>
-
-  <!-- Sidebar navigation -->
-  <nav class="sidebar">
-    <ul>
-        <li><a href="../home/">Home</a></li>
-        <li><a href="../about/">About Us</a></li>
-        <li><a href="../projects/">Our Projects</a></li>
-        <li><a href="../goals/">Our Goals</a></li>
-        <li><a href="../contact/">Contact</a></li>
-        <li><a href="../services/">Services</a></li>
-        <li><a href="../careers/">Careers</a></li>
-        <li><a href="../faq/">FAQ</a></li>
-      </ul>
-    <div class="sidebar-footer">
-        &copy; AlphaZeta Khonnect 2025
-      </div>
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" data-i18n="nav.portal" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
   </nav>
+  <div class="mobile-overlay"></div>
 
-  <!-- Main content -->
-  <main class="content">
-    <!-- Hero Image -->
-    <div class="hero-image">
-      <img src="../img/projects.png" alt="Hero Image" class="hero-img" />
+  <main>
+    <div class="hero-section">
+      <img src="../img/projects.png" alt="Our Projects" />
+      <div class="hero-content">
+        <h2 data-i18n="projects.hero.title">Our Projects</h2>
+        <p data-i18n="projects.hero.subtitle">Proven delivery across insurance, logistics, finance, and enterprise operations.</p>
+      </div>
     </div>
 
-    <!-- Company Services Description Section -->
-    <section class="services-description">
-      <h2>Our Projects</h2>
-      <p>
-        At AZ Khonnect, we’ve successfully delivered a wide variety of IT solutions across different industries and use cases. Our project experience ranges from developing custom <strong>accounting software</strong> to building <strong>broker and insurance registration platforms</strong>. 
-      </p>
-      <p>
-        We've worked extensively on <strong>CRM implementations</strong>, both using custom in-house tools as well as with platforms like <strong>Odoo</strong>. In addition, we’ve carried out comprehensive <strong>Data Warehouse</strong> projects and <strong>process optimization</strong> initiatives to help businesses improve operational efficiency.
-      </p>
-      <p>
-        Our portfolio also includes <strong>Warehouse Management Systems (WMS)</strong> that streamline inventory and logistics operations. And beyond enterprise applications, we also enjoy exploring <strong>game development</strong> as a creative and technical hobby.
-      </p>
-      <p>
-        We pride ourselves on adapting to each client's specific needs, ensuring that every project we take on delivers real value and measurable results.
-      </p>
-    </section>
-
-    <!-- Grid blocks -->
-    <div class="grid">
-      <div class="grid-item grid-item-project1" onclick="location.href='cneu-accounting.html'">
-        <h3>CNEU Accounting Software</h3>
-        <p>Custom accounting platform for financial workflows.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project2" onclick="location.href='formation30-accounting.html'">
-        <h3>Formation 3.0 Accounting</h3>
-        <p>Streamlined accounting system for Formation 3.0.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project3" onclick="location.href='insurance-crm.html'">
-        <h3>Insurance CRM</h3>
-        <p>CRM system for a private insurance firm.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project4" onclick="location.href='insurance-dwh.html'">
-        <h3>Insurance Data Warehouse</h3>
-        <p>Data centralization and analytics solution.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project5" onclick="location.href='gorillas-wms.html'">
-        <h3>Warehouse Management</h3>
-        <p>WMS for Gorillas Technologies' logistics needs.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project6" onclick="location.href='gorillas-process.html'">
-        <h3>Gorillas Optimization</h3>
-        <p>Operational improvement for tech-driven delivery.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project7" onclick="location.href='formation30-process.html'">
-        <h3>Formation 3.0 Optimization</h3>
-        <p>Process analysis and automation initiatives.</p>
-      </div>
-    
-      <div class="grid-item grid-item-project8" onclick="location.href='games-hobby.html'">
-        <h3>Games & Personal Projects</h3>
-        <p>Creative development and side projects.</p>
+    <div class="section-alt">
+      <div class="section section-centered reveal">
+        <p data-i18n="projects.intro1">
+          Our portfolio spans custom accounting platforms, broker and insurance registration systems, and end-to-end CRM implementations using both proprietary tools and Odoo.
+        </p>
+        <p data-i18n="projects.intro2">
+          We have delivered data warehouse solutions and process optimisation engagements that measurably improved operational efficiency for our clients.
+        </p>
+        <p data-i18n="projects.intro3">
+          Our Warehouse Management Systems (WMS) support real-time logistics and inventory operations. We also apply our technical capabilities to game development as a creative R&amp;D initiative.
+        </p>
       </div>
     </div>
-    
+
+    <div class="section reveal">
+      <div class="grid">
+        <div class="grid-item" onclick="location.href='cneu-accounting.html'">
+          <h3 data-i18n="projects.card.cneu.title">CNEU Accounting Software</h3>
+          <p data-i18n="projects.card.cneu.desc">Bespoke accounting platform automating financial reporting and transaction management for CNEU.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='formation30-accounting.html'">
+          <h3 data-i18n="projects.card.formation.title">Formation 3.0 Accounting</h3>
+          <p data-i18n="projects.card.formation.desc">End-to-end accounting system designed to streamline financial operations for Formation 3.0.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='insurance-crm.html'">
+          <h3 data-i18n="projects.card.crm.title">Insurance CRM</h3>
+          <p data-i18n="projects.card.crm.desc">Client relationship management platform built for policy tracking, broker coordination, and client communications.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='insurance-dwh.html'">
+          <h3 data-i18n="projects.card.dwh.title">Insurance Data Warehouse</h3>
+          <p data-i18n="projects.card.dwh.desc">Centralised data architecture enabling cross-departmental analytics and regulatory reporting.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='gorillas-wms.html'">
+          <h3 data-i18n="projects.card.wms.title">Gorillas WMS</h3>
+          <p data-i18n="projects.card.wms.desc">Warehouse management system for real-time inventory tracking and logistics coordination at Gorillas Technologies.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='gorillas-process.html'">
+          <h3 data-i18n="projects.card.gorillas.title">Gorillas Process Optimisation</h3>
+          <p data-i18n="projects.card.gorillas.desc">Operational workflow analysis and redesign for a high-velocity last-mile delivery operation.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='formation30-process.html'">
+          <h3 data-i18n="projects.card.f30process.title">Formation 3.0 Process Optimisation</h3>
+          <p data-i18n="projects.card.f30process.desc">Business process analysis, bottleneck identification, and automation implementation.</p>
+        </div>
+        <div class="grid-item" onclick="location.href='games-hobby.html'">
+          <h3 data-i18n="projects.card.games.title">Games &amp; R&amp;D Projects</h3>
+          <p data-i18n="projects.card.games.desc">Experimental game development applying advanced programming techniques and creative problem-solving.</p>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <!-- JS for toggle -->
-  <script>
-    function toggleSidebar() {
-      document.querySelector('.sidebar').classList.toggle('active');
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

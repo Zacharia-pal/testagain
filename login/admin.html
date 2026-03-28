@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — AZ Khonnect Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="supabase.min.js?v=2"></script>
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="../img/logo-dark.svg" alt="AZ Khonnect">
+        <div>
+          <h2>AZ Khonnect</h2>
+          <span>Client Portal</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">
+          <span class="nav-icon">&#9707;</span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="request.html">
+          <span class="nav-icon">&#10010;</span>
+          <span class="nav-label">New Request</span>
+        </a>
+        <a href="settings.html">
+          <span class="nav-icon">&#9998;</span>
+          <span class="nav-label">Settings</span>
+        </a>
+        <div class="nav-divider"></div>
+        <a href="admin.html" id="admin-link" class="active">
+          <span class="nav-icon">&#9881;</span>
+          <span class="nav-label">Admin Panel</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" onclick="logout(); return false;">
+          <span class="nav-icon">&#10132;</span>
+          <span>Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+          <h1>Admin Panel</h1>
+          <span class="admin-badge">Admin</span>
+        </div>
+        <div class="topbar-right">
+          <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">&#9789;</button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="page-content">
+
+        <!-- Admin Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-icon">&#128203;</span>
+            <div class="stat-label">Total Requests</div>
+            <div class="stat-value" id="admin-stat-total">0</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">&#9881;</span>
+            <div class="stat-label">Active</div>
+            <div class="stat-value" id="admin-stat-active">0</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">&#10004;</span>
+            <div class="stat-label">Completed</div>
+            <div class="stat-value" id="admin-stat-completed">0</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">&#9888;</span>
+            <div class="stat-label">High / Urgent</div>
+            <div class="stat-value" id="admin-stat-urgent">0</div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-bar">
+          <select id="filter-status" class="form-control">
+            <option value="">All Statuses</option>
+            <option value="1">Requested</option>
+            <option value="2">Under Review</option>
+            <option value="3">Proposal Sent</option>
+            <option value="4">Accepted</option>
+            <option value="5">In Progress</option>
+            <option value="6">Review</option>
+            <option value="7">Delivered</option>
+            <option value="8">Closed</option>
+          </select>
+          <select id="filter-service" class="form-control">
+            <option value="">All Services</option>
+            <!-- Populated by app.js -->
+          </select>
+        </div>
+
+        <!-- Requests Table -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Email</th>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody id="admin-table-body">
+              <tr>
+                <td colspan="7" style="text-align:center;padding:2rem;color:var(--color-text-secondary);">Loading...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="supabase-config.js?v=2"></script>
+  <script src="auth.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

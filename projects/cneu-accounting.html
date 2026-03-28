@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CNEU Accounting Software project — streamlining and automating accounting processes for a Brussels-based organization." />
+  <title>CNEU Accounting Software - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
+      <h1>AZ Khonnect</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" class="active" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="project.cneu.title">CNEU Accounting Software</h2>
+      <p><strong>Client:</strong> CNEU &mdash; Brussels, Belgium<br />
+      <strong>Role:</strong> Accounting Intern with IT Focus<br />
+      <strong>Period:</strong> May 2019 &ndash; September 2020</p>
+
+      <h3 data-i18n="project.heading.overview">Overview and Challenge</h3>
+      <p data-i18n="project.cneu.overview">CNEU, a Brussels-based organization, relied heavily on manual processes for its day-to-day accounting operations. Financial workflows were fragmented, time-consuming, and prone to human error. The organization needed a structured approach to bring order to its accounting systems and reduce the administrative burden on staff. Additionally, their online platform required back-end translation from English to Dutch to better serve their multilingual audience in Belgium.</p>
+
+      <h3>Our Approach</h3>
+      <p>We conducted a thorough audit of the existing financial workflows to identify bottlenecks and inefficiencies. Each step of the accounting process was documented and evaluated for automation potential. Where manual data entry and repetitive tasks were slowing operations down, we designed and implemented automated solutions that reduced processing time and improved data accuracy. The approach was methodical: understand the current state, map out an improved workflow, and implement changes incrementally to minimize disruption.</p>
+
+      <p>In parallel, we contributed to the organization's online platform by handling back-end translation work from English to Dutch. This ensured that the platform was fully accessible and professional for Dutch-speaking users, an important consideration in Belgium's multilingual business environment.</p>
+
+      <h3>Key Deliverables</h3>
+      <ul>
+        <li>Comprehensive audit and documentation of existing accounting workflows</li>
+        <li>Identification and elimination of process inefficiencies</li>
+        <li>Automated accounting processes to reduce manual data entry</li>
+        <li>Streamlined financial reporting and record-keeping</li>
+        <li>Back-end platform translation (English to Dutch)</li>
+      </ul>
+
+      <h3>Results and Impact</h3>
+      <p>The project delivered measurable improvements to CNEU's accounting operations. Manual tasks that previously consumed significant staff hours were automated, freeing up resources for higher-value work. The streamlined workflows reduced the risk of errors in financial records and improved the speed of reporting. This early-career project laid the foundation for a continued focus on process improvement, data accuracy, and the intersection of IT and business operations.</p>
+
+      <a href="../projects/" class="back-button" data-i18n="project.back">Back to Projects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

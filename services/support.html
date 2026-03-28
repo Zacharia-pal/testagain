@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT support and maintenance services by AZ Khonnect. System monitoring, security updates, performance optimisation, bug resolution, and SLA-based support tiers." />
+  <title>Support &amp; Maintenance - AZ Khonnect</title>
+  <link rel="icon" href="../logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.svg" alt="AZ Khonnect" class="logo-light" /><img src="../img/logo-dark.svg" alt="AZ Khonnect" class="logo-dark" />
+      <h1>AZ Khonnect</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="../home/" data-i18n="nav.home">Home</a>
+      <a href="../about/" data-i18n="nav.about">About</a>
+      <a href="../projects/" data-i18n="nav.projects">Projects</a>
+      <a href="../goals/" data-i18n="nav.goals">Goals</a>
+      <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+      <a href="../careers/" data-i18n="nav.careers">Careers</a>
+      <a href="../contact/" data-i18n="nav.contact">Contact</a>
+      <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+      <a href="/login/" class="portal-link" style="background:#3da5d9;color:#fff;border-radius:6px;padding:8px 14px;">Client Portal</a>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="dark-mode-icon">&#9789;</span>
+      </button>
+      <div class="language-flags">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Francais" title="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" title="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English" onclick="setLanguage('en')" style="cursor:pointer" />
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="../home/" data-i18n="nav.home">Home</a>
+    <a href="../about/" data-i18n="nav.about">About</a>
+    <a href="../projects/" data-i18n="nav.projects">Projects</a>
+    <a href="../goals/" data-i18n="nav.goals">Goals</a>
+    <a href="../services/" class="active" data-i18n="nav.services">Services</a>
+    <a href="../careers/" data-i18n="nav.careers">Careers</a>
+    <a href="../contact/" data-i18n="nav.contact">Contact</a>
+    <a href="../faq/" data-i18n="nav.faq">FAQ</a>
+    <a href="/login/" class="portal-link" style="color:#3da5d9;font-weight:600;">Client Portal</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="dark-mode-icon">&#9789;</span>
+    </button>
+    <div class="mobile-flags">
+      <img src="https://flagcdn.com/w40/fr.png" alt="Francais" onclick="setLanguage('fr')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nederlands" onclick="setLanguage('nl')" style="cursor:pointer" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" style="cursor:pointer" />
+    </div>
+  </nav>
+  <div class="mobile-overlay"></div>
+
+  <main>
+    <div class="section reveal">
+      <h2 data-i18n="services.card.support.title">Support &amp; Maintenance</h2>
+      <p>Launching a system is only the beginning. Without ongoing attention, software degrades&mdash;security vulnerabilities accumulate, performance drifts, and small issues compound into costly outages. AZ Khonnect provides structured support and maintenance services that keep your systems secure, performant, and aligned with your evolving business needs.</p>
+
+      <h3>Our Approach</h3>
+      <p>We offer tiered support plans that scale with the criticality of your systems. Each plan defines clear response times, service windows, and escalation procedures so that you always know what to expect. Whether you need basic monitoring and quarterly check-ins or dedicated support with rapid incident response, we tailor the arrangement to your operational requirements and budget.</p>
+      <p>Proactive maintenance is at the core of what we do. Rather than waiting for problems to surface, we monitor system health, apply security patches, review logs, and optimise performance on a regular schedule. When issues do arise, our incident response process ensures they are diagnosed, resolved, and documented quickly&mdash;with root cause analysis to prevent recurrence.</p>
+      <p>We also maintain comprehensive system documentation. Every change, update, and configuration adjustment is recorded, giving your team full visibility into what has been done and why. This documentation is invaluable for onboarding new staff, planning upgrades, and maintaining compliance.</p>
+
+      <h3>Key Capabilities</h3>
+      <ul>
+        <li><strong>System Monitoring</strong> &ndash; Continuous or scheduled monitoring of application health, server performance, database status, and pipeline execution (including Airflow DAGs and cron jobs).</li>
+        <li><strong>Security Updates</strong> &ndash; Timely application of security patches for operating systems (Linux, AlmaLinux), databases (PostgreSQL), application frameworks (Odoo, Python), and web infrastructure.</li>
+        <li><strong>Performance Optimisation</strong> &ndash; Database query tuning, application profiling, caching improvements, and infrastructure adjustments to maintain fast response times as data volumes grow.</li>
+        <li><strong>Bug Resolution</strong> &ndash; Systematic diagnosis and resolution of software defects, with prioritisation based on business impact and clear communication throughout the process.</li>
+        <li><strong>Incident Response</strong> &ndash; Defined escalation paths, rapid diagnosis, and resolution for critical issues, followed by post-incident reviews and preventive measures.</li>
+        <li><strong>System Documentation</strong> &ndash; Maintained and updated technical documentation covering architecture, configuration, deployment procedures, and operational runbooks.</li>
+      </ul>
+
+      <h3>Support Tiers</h3>
+      <ul>
+        <li><strong>Essential</strong> &ndash; Monthly system health checks, security patch management, and email-based support with next-business-day response. Ideal for stable systems with low change frequency.</li>
+        <li><strong>Professional</strong> &ndash; Weekly monitoring, proactive performance reviews, priority bug resolution, and support with same-day response during business hours. Suited for business-critical applications.</li>
+        <li><strong>Premium</strong> &ndash; Continuous monitoring, rapid incident response, dedicated support contact, and quarterly strategic reviews. Designed for organisations where system downtime directly impacts revenue or compliance.</li>
+      </ul>
+
+      <h3>What We Deliver</h3>
+      <ul>
+        <li>A signed Service Level Agreement defining scope, response times, and responsibilities</li>
+        <li>Regular maintenance reports summarising actions taken and system status</li>
+        <li>Proactive security patching and vulnerability management</li>
+        <li>Performance baselines and trend analysis to anticipate issues before they impact users</li>
+        <li>Up-to-date system documentation and operational runbooks</li>
+        <li>Clear communication channels and escalation procedures</li>
+      </ul>
+
+      <h3>Who This Is For</h3>
+      <p>Our support and maintenance services are for any organisation that depends on custom software, ERP systems, data pipelines, or web applications to operate. If you have invested in building or deploying a system, we ensure that investment continues to deliver value. We support clients across insurance, logistics, finance, HR, non-profits, and hospitality&mdash;providing the reliability and peace of mind that comes from knowing your systems are in capable hands.</p>
+
+      <h3>Pricing</h3>
+      <div style="background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%); border-radius: 12px; padding: 30px; margin: 20px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+          <tr style="border-bottom: 2px solid #ddd;">
+            <th style="text-align: left; padding: 12px 16px; color: #1a2744;">Description</th>
+            <th style="text-align: right; padding: 12px 16px; color: #666;">Market Average</th>
+            <th style="text-align: right; padding: 12px 16px; color: #1a2744; font-weight: 700;">AZ Khonnect Price</th>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Essential Support (monthly)</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;500 &ndash; &euro;1,000/mo</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;375 &ndash; &euro;750/mo</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Professional Support (monthly)</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;1,000 &ndash; &euro;2,500/mo</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;750 &ndash; &euro;1,875/mo</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Premium Support (monthly)</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;2,500 &ndash; &euro;5,000/mo</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;1,875 &ndash; &euro;3,750/mo</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px;">Hourly Rate (ad-hoc)</td>
+            <td style="text-align: right; padding: 12px 16px; color: #666; text-decoration: line-through;">&euro;100 &ndash; &euro;150/hr</td>
+            <td style="text-align: right; padding: 12px 16px; color: #3da5d9; font-weight: 700;">&euro;75 &ndash; &euro;112/hr</td>
+          </tr>
+        </table>
+        <p style="margin-top: 16px; padding: 12px 16px; background: #3da5d9; color: white; border-radius: 8px; text-align: center; font-weight: 600;">
+          25% below market rate &mdash; enterprise-grade delivery at competitive pricing
+        </p>
+      </div>
+
+      <a href="../services/" class="back-button" data-i18n="service.back">Back to Services</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025&ndash;2026 <strong>AZ Khonnect</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+  <script src="../chatbot.js"></script>
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" aria-label="Open chat">
+      <span>&#128172;</span>
+    </button>
+    <div id="chatbot-panel">
+      <div id="chatbot-header">
+        <span>AZ Khonnect Assistant</span>
+        <button id="chatbot-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-quick-replies"></div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatbot-send" aria-label="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

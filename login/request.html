@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Request — AZ Khonnect Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="supabase.min.js?v=2"></script>
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="../img/logo-dark.svg" alt="AZ Khonnect">
+        <div>
+          <h2>AZ Khonnect</h2>
+          <span>Client Portal</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">
+          <span class="nav-icon">&#9707;</span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="request.html" class="active">
+          <span class="nav-icon">&#10010;</span>
+          <span class="nav-label">New Request</span>
+        </a>
+        <a href="settings.html">
+          <span class="nav-icon">&#9998;</span>
+          <span class="nav-label">Settings</span>
+        </a>
+        <div class="nav-divider"></div>
+        <a href="admin.html" id="admin-link" style="display:none;">
+          <span class="nav-icon">&#9881;</span>
+          <span class="nav-label">Admin Panel</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" onclick="logout(); return false;">
+          <span class="nav-icon">&#10132;</span>
+          <span>Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+          <h1>New Service Request</h1>
+        </div>
+        <div class="topbar-right">
+          <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">&#9789;</button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="page-content">
+        <div class="page-header">
+          <p>Tell us about the service you need. We will review your request and get back to you with a proposal.</p>
+        </div>
+
+        <div class="detail-card" style="max-width:720px;">
+          <form id="request-form">
+            <div class="form-group">
+              <label for="req-service">Service Type *</label>
+              <select id="req-service" class="form-control" required>
+                <option value="">Select a service...</option>
+                <option value="Custom Software Development">Custom Software Development</option>
+                <option value="CRM Implementation">CRM Implementation</option>
+                <option value="Data Warehousing &amp; Analytics">Data Warehousing &amp; Analytics</option>
+                <option value="Process Optimisation">Process Optimisation</option>
+                <option value="Warehouse Management Systems">Warehouse Management Systems</option>
+                <option value="IT Consulting">IT Consulting</option>
+                <option value="Website &amp; Web App Development">Website &amp; Web App Development</option>
+                <option value="Support &amp; Maintenance">Support &amp; Maintenance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="req-description">Description *</label>
+              <textarea id="req-description" class="form-control" rows="6" placeholder="Describe your project, goals, and any specific requirements..." required></textarea>
+              <span class="form-hint">Be as detailed as possible so we can provide an accurate proposal.</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="req-budget">Budget Range</label>
+                <select id="req-budget" class="form-control">
+                  <option value="">Select budget range...</option>
+                  <option value="< €5,000">&lt; &euro;5,000</option>
+                  <option value="€5,000 - €15,000">&euro;5,000 - &euro;15,000</option>
+                  <option value="€15,000 - €30,000">&euro;15,000 - &euro;30,000</option>
+                  <option value="€30,000+">&euro;30,000+</option>
+                  <option value="To be discussed">To be discussed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="req-timeline">Preferred Timeline</label>
+                <select id="req-timeline" class="form-control">
+                  <option value="">Select timeline...</option>
+                  <option value="ASAP">ASAP</option>
+                  <option value="1-3 months">1-3 months</option>
+                  <option value="3-6 months">3-6 months</option>
+                  <option value="6+ months">6+ months</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="req-priority">Priority</label>
+              <select id="req-priority" class="form-control">
+                <option value="Low">Low</option>
+                <option value="Normal" selected>Normal</option>
+                <option value="High">High</option>
+                <option value="Urgent">Urgent</option>
+              </select>
+            </div>
+
+            <div style="display:flex;gap:1rem;margin-top:1.5rem;">
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+              <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="supabase-config.js?v=2"></script>
+  <script src="auth.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
