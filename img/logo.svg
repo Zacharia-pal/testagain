@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      .logo-a { fill: #1a2744; }
+      .logo-z { fill: #3da5d9; }
+    </style>
+  </defs>
+  <!-- A / triangular shape - left side -->
+  <path class="logo-a" d="M 60 440 L 210 60 L 360 440 L 280 440 L 210 270 L 140 440 Z"/>
+  <!-- A cutout / inner triangle -->
+  <path class="logo-a" d="M 175 360 L 245 360 L 210 280 Z" fill="#fff" class="logo-a-hole"/>
+  <!-- Z shape - overlapping right side -->
+  <path class="logo-z" d="M 165 80 L 440 80 L 440 130 L 250 390 L 450 390 L 450 440 L 155 440 L 155 390 L 345 130 L 165 130 Z"/>
+</svg>

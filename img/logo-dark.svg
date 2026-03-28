@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- A / triangular shape - WHITE for dark backgrounds -->
+  <path d="M 60 440 L 210 60 L 360 440 L 280 440 L 210 270 L 140 440 Z" fill="#ffffff"/>
+  <!-- A cutout / inner triangle - transparent -->
+  <path d="M 175 360 L 245 360 L 210 280 Z" fill="none"/>
+  <!-- Z shape - same blue -->
+  <path d="M 165 80 L 440 80 L 440 130 L 250 390 L 450 390 L 450 440 L 155 440 L 155 390 L 345 130 L 165 130 Z" fill="#3da5d9"/>
+</svg>
